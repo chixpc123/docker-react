@@ -6,4 +6,4 @@ before_install:
   - docker build -t chixdocker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run chixdocker/docker-react npm run test -- --coverage
+  - docker run -e CI=true chixdocker/docker-react npm run test -- --coverage
